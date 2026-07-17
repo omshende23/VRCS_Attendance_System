@@ -4,6 +4,7 @@ import AdminLogin from "../pages/auth/AdminLogin";
 import StudentLogin from "../pages/auth/StudentLogin";
 
 import Dashboard from "../pages/admin/Dashboard";
+import Students from "../pages/admin/Students";
 
 function AppRoutes() {
   return (
@@ -19,7 +20,7 @@ function AppRoutes() {
 
         {/* Admin */}
         <Route path="/admin/dashboard" element={<Dashboard />} />
-
+        <Route path="/admin/students" element={<Students />} />
       </Routes>
     </BrowserRouter>
   );

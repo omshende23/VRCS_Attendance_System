@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const studentRoutes = require("./routes/studentRoutes");
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
@@ -16,6 +17,7 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use("/api/students", studentRoutes);
 
 // Routes
 app.use("/api/auth", authRoutes);
